@@ -6,6 +6,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import jakarta.validation.ConstraintViolation;
+import jakarta.ws.rs.core.Response;
 
 public class ResponseError {
 
@@ -44,6 +45,10 @@ public class ResponseError {
 
     public void setErrors(Collection<FieldError> errors) {
         this.errors = errors;
+    }
+
+    public Response withStatusCode(int code) {
+        return Response.status(code).entity(this).build();
     }
 
 }
