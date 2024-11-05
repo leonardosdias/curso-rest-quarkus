@@ -12,3 +12,9 @@ create table POSTS (
     date_time timestamp not null,
     user_id bigint not null references USERS(id)
 );
+
+create table FOLLOWERS (
+    id bigserial not null primary key,
+    user_id bigint not null references USERS (id),
+    follower_id bigint not null references USERS(id)
+);
