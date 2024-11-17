@@ -19,7 +19,6 @@ import io.restassured.http.ContentType;
 // import jakarta.ws.rs.core.Response;
 import io.github.leonardosdias.quarkussocial.rest.dto.CreateUserRequest;
 import io.github.leonardosdias.quarkussocial.rest.dto.ResponseError;
-// import io.github.leonardosdias.quarkussocial.domain.model.*;
 import org.hamcrest.Matchers;
 
 @QuarkusTest
